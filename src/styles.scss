@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.darkTheme {
+  --title-color-text: white;
+  --background-color: black;
+  --theme-image: "assets/sun.png";
+  --background-right: rgb(61, 61, 61);
+  --background-container: rgb(19, 19, 19);
+  --background-theme: black;
+}
+
+.whiteTheme {
+  --title-color-text: black;
+  --background-color: rgba(0, 136, 109, 0.2);
+  --theme-image: "assets/moon.png";
+  --background-right: rgba(0, 136, 109, 0.2);
+  --background-container: #fff;
+  --background-theme: #fff;
+}
