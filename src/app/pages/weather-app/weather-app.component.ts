@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../shared/services/theme.service';
 import { ThemeEnum } from 'src/app/utilities/enums/theme.enum';
@@ -10,7 +10,7 @@ import { ThemeEnum } from 'src/app/utilities/enums/theme.enum';
   templateUrl: './weather-app.component.html',
   styleUrls: ['./weather-app.component.scss'],
 })
-export class WeatherAppComponent {
+export class WeatherAppComponent implements OnInit {
   public icon = 'assets/day-and-night.png';
   public themeImage = '';
   public cloudSunny = 'assets/cloud-sun.svg';
@@ -21,13 +21,12 @@ export class WeatherAppComponent {
   public cloudLighting = 'assets/cloud-lighting.png';
   public cloudRain = 'assets/cloud-rain.png';
   public cloudLightingSun = 'assets/cloud-lighting-sun.png';
-  public cloudSunny2 = 'assets/cloud-sun-2.png';
+  public cloudSunnyLittle = 'assets/cloud-sun-2.png';
 
-  constructor(public themeService: ThemeService) {
+  constructor(public themeService: ThemeService) {}
+
+  ngOnInit(): void {
     this.updateThemeImage();
-    this.themeService.themeChanged.subscribe(() => {
-      this.updateThemeImage();
-    });
   }
 
   public updateThemeImage(): void {

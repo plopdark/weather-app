@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { ThemeEnum } from '../../utilities/enums/theme.enum';
-import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
   public storedTheme = localStorage.getItem('theme-color');
-  public themeChanged = new Subject<void>();
 
   constructor() {}
 
