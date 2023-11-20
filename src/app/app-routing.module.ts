@@ -4,8 +4,8 @@ import { WeatherAppComponent } from './pages/weather-app/weather-app.component';
 import { RoutingEnum } from './utilities/enums/routing.enum';
 
 export const routes: Routes = [
-  RoutingEnum,
-  { path: 'home', component: WeatherAppComponent },
+  { path: '', pathMatch: 'prefix', redirectTo: RoutingEnum.home },
+  { path: RoutingEnum.home, component: WeatherAppComponent },
 ];
 
 @NgModule({

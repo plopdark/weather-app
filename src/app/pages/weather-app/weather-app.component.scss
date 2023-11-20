@@ -45,11 +45,13 @@
     font-weight: 700;
     color: $title-color-text;
   }
+
   &__theme {
     border: none;
     cursor: pointer;
     margin-left: auto;
     background: transparent;
+
     &_image {
       width: 40px;
     }
@@ -73,7 +75,7 @@
     justify-content: center;
     display: flex;
     color: $title-color-text;
-    gap: 0;
+
     &-img {
       display: flex;
       align-items: center;
@@ -92,9 +94,11 @@
     left: 99.4%;
     filter: blur(2px);
   }
+
   &__bottom {
     position: relative;
   }
+
   &__text {
     font-weight: 400;
     font-size: 16px;
