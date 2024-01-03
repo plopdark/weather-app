@@ -1,0 +1,76 @@
+<div class="overlay" (click)="onBlur()" *ngIf="isInputActive"></div>
+<div class="weather-page">
+  <div class="weather-page__container">
+    <div class="weather-page__top">
+      <div class="weather-page__left">
+        <h3 class="weather-page__city">{{ name }}, {{ country }}</h3>
+        <app-theme-button
+          class="weather-page__theme"
+          (click)="magniferChange()"
+        ></app-theme-button>
+      </div>
+      <div class="weather-page__input-block">
+        <img
+          [src]="magnifer"
+          alt="Magnifer"
+          class="weather-page__input-block_image"
+        />
+        <input
+          type="text"
+          class="weather-page__input-block_input"
+          placeholder="Search the city"
+          [formControl]="searchForm"
+          (click)="onInput()"
+        />
+        <ul *ngIf="cities.length > 0 && isInputActive" class="city-list">
+          <li *ngFor="let city of cities" (click)="selectCity(city.name)">
+            {{ city.name }}, {{ city.country }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="weather-page__main">
+      <p class="weather-page__main-date">
+        <span *ngIf="lastUpdated">{{ formattedDate }}</span
+        >,
+        <span *ngIf="lastUpdated">{{ formattedTime }}</span>
+      </p>
+      <div class="weather-page__main-info">
+        <div class="weather-page__main-info_left">
+          <img
+            [src]="bigImg"
+            alt="Current Weather"
+            class="weather-page__main-info_bigimg"
+          />
+          <span class="weather-page__main-info_bigtemp" *ngIf="temp >= 0.5">
+            +{{ temp | number : "1.0-0" }}°C
+          </span>
+          <span class="weather-page__main-info_bigtemp" *ngIf="temp < 0.5">
+            {{ temp | number : "1.0-0" }}°C
+          </span>
+        </div>
+        <div class="weather-page-block">
+          <div class="weather-page__main-info_indicators">
+            <p>Temp, °C</p>
+            <p>Feels Like</p>
+            <p>Pressure, mB</p>
+            <p>Humidity, %</p>
+            <p>Wind, km/h</p>
+          </div>
+          <div class="weather-page__main-info_items">
+            <app-day-part
+              *ngFor="let part of dayParts"
+              [partBlock]="part"
+            ></app-day-part>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="next-days-container">
+      <app-next-days
+        *ngFor="let day of nextDays"
+        [forecastData]="day"
+      ></app-next-days>
+    </div>
+  </div>
+</div>

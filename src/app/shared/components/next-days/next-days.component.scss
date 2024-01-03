@@ -1,0 +1,99 @@
+.weather-page {
+  &__days {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    //  justify-content: space-between;
+  }
+
+  &__day {
+    max-width: 182px;
+    max-height: 165px;
+    padding: 12px 16px 20px;
+    border-radius: 30px;
+    border: 1px solid #494949;
+    background: linear-gradient(
+      163deg,
+      rgba(0, 0, 0, 0.03) -1.68%,
+      rgba(255, 255, 255, 0.09) 127.54%,
+      rgba(255, 255, 255, 0.11) 127.56%,
+      rgba(255, 255, 255, 0.11) 127.57%,
+      rgba(255, 255, 255, 0.15) 127.58%
+    );
+
+    &_title &_text {
+      font-family: Open Sans;
+    }
+
+    &_title {
+      margin-bottom: 4px;
+    }
+
+    &_text {
+      font-size: 16px;
+    }
+
+    &_show {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    &_img {
+      max-width: 56px;
+    }
+
+    &_weathers {
+      font-family: Inter;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 24px;
+    }
+
+    &_high {
+      font-weight: 500;
+    }
+
+    &_low {
+      color: #686868;
+    }
+  }
+}
+
+// --------------------------------------
+
+@media (max-width: 1150px) {
+  .weather-page {
+    &__day {
+      &_img {
+        max-width: 50px;
+      }
+
+      &_high &_low {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 935px) {
+  .weather-page__day {
+    &_show {
+      gap: 20px;
+    }
+
+    &_high &_low {
+      font-size: 20px;
+    }
+
+    &_img {
+      max-width: 45px;
+    }
+
+    &_text &_title {
+      font-size: 14px;
+    }
+  }
+}

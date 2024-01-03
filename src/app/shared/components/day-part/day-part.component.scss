@@ -1,0 +1,149 @@
+.item-weather-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+
+  &__columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 45px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__time &__title &__params {
+    font-family: Open Sans;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  &__time {
+    font-size: 22px;
+  }
+
+  &__img {
+    width: 50px;
+    object-fit: cover;
+  }
+
+  &__params {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+}
+
+// --------------------------------------
+
+@media (max-width: 1240px) {
+  .item-weather-page {
+    &__column {
+      gap: 13px;
+    }
+
+    &__img {
+      width: 45px;
+    }
+  }
+}
+
+@media (max-width: 1190px) {
+  .item-weather-page {
+    &__columns {
+      gap: 40px;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .item-weather-page {
+    &__title {
+      font-size: 22px;
+    }
+
+    &__time {
+      font-size: 20px;
+    }
+
+    &__columns {
+      gap: 35px;
+    }
+
+    &__column {
+      gap: 10px;
+    }
+
+    &__params {
+      font-size: 16px;
+    }
+
+    &__img {
+      width: 40px;
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  .item-weather-page {
+    padding: 0 15px;
+
+    &_columns {
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 985px) {
+  .item-weather-page {
+    padding: 0 10px;
+
+    &__columns {
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 935px) {
+  .item-weather-page {
+    &__columns {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .item-weather-page {
+    &__title {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+    &__time &__params {
+      font-size: 18px;
+    }
+
+    &__img {
+      width: 35px;
+    }
+
+    &__column {
+      gap: 7px;
+    }
+
+    &__columns {
+      gap: 15px;
+    }
+  }
+}

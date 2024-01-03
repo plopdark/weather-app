@@ -1,0 +1,20 @@
+.theme-button {
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  background: transparent;
+
+  &__image {
+    width: 40px;
+  }
+}
+
+// --------------------------------------
+
+@media (max-width: 1070px) {
+  .theme-button {
+    &__image {
+      width: 35px;
+    }
+  }
+}
