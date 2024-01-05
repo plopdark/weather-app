@@ -1,0 +1,71 @@
+<div class="item-weather-page">
+  <h3 class="item-weather-page__title">{{ partBlock.daypart }}</h3>
+  <div class="item-weather-page__columns">
+    <div class="item-weather-page__column">
+      <p class="item-weather-page__time">{{ partBlock.time[0] }}</p>
+      <img [src]="currentFirstImage" alt="" class="item-weather-page__img" />
+      <span
+        class="item-weather-page__params"
+        *ngIf="currentFirstHour?.temp_c >= 0.5"
+      >
+        +{{ currentFirstHour?.temp_c | number : "1.0-0" }}°
+      </span>
+      <span
+        class="item-weather-page__params"
+        *ngIf="currentFirstHour?.temp_c < 0.5"
+      >
+        {{ currentFirstHour?.temp_c | number : "1.0-0" }}°
+      </span>
+      <span
+        class="item-weather-page__params"
+        *ngIf="currentFirstHour?.feelslike_c >= 0.5"
+      >
+        +{{ currentFirstHour?.feelslike_c | number : "1.0-0" }}°
+      </span>
+      <span
+        class="item-weather-page__params"
+        *ngIf="currentFirstHour?.feelslike_c < 0.5"
+      >
+        {{ currentFirstHour?.feelslike_c | number : "1.0-0" }}°
+      </span>
+      <p class="item-weather-page__params">
+        {{ currentFirstHour?.pressure_mb }}
+      </p>
+      <p class="item-weather-page__params">{{ currentFirstHour?.humidity }}</p>
+      <p class="item-weather-page__params">{{ currentFirstHour?.wind_kph }}</p>
+    </div>
+    <div class="item-weather-page__column">
+      <p class="item-weather-page__time">{{ partBlock.time[1] }}</p>
+      <img [src]="currentSecondImage" alt="" class="item-weather-page__img" />
+      <span
+        class="item-weather-page__params"
+        *ngIf="currentSecondHour?.temp_c >= 0.5"
+      >
+        +{{ currentSecondHour?.temp_c | number : "1.0-0" }}°
+      </span>
+      <span
+        class="item-weather-page__params"
+        *ngIf="currentSecondHour?.temp_c < 0.5"
+      >
+        {{ currentSecondHour?.temp_c | number : "1.0-0" }}°
+      </span>
+      <span
+        class="item-weather-page__params"
+        *ngIf="currentSecondHour?.feelslike_c >= 0.5"
+      >
+        +{{ currentSecondHour?.feelslike_c | number : "1.0-0" }}°
+      </span>
+      <span
+        class="item-weather-page__params"
+        *ngIf="currentSecondHour?.feelslike_c < 0.5"
+      >
+        {{ currentSecondHour?.feelslike_c | number : "1.0-0" }}°
+      </span>
+      <p class="item-weather-page__params">
+        {{ currentSecondHour?.pressure_mb }}
+      </p>
+      <p class="item-weather-page__params">{{ currentSecondHour?.humidity }}</p>
+      <p class="item-weather-page__params">{{ currentSecondHour?.wind_kph }}</p>
+    </div>
+  </div>
+</div>

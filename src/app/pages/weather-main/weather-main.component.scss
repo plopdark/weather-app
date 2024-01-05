@@ -1,5 +1,12 @@
 @import "src/app/styles/theme";
 
+.texts {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
 .weather {
   font-family: Roboto Slab, serif;
   background: $background-color;
@@ -13,9 +20,9 @@
     width: 100%;
     height: 100%;
     display: flex;
-    background: $background-container;
     padding: 30px;
     justify-content: center;
+    background: $background-container;
   }
 
   &__left {
@@ -33,6 +40,7 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    justify-content: space-between;
   }
 
   &__icon img {
@@ -44,17 +52,6 @@
     font-size: 40px;
     font-weight: 700;
     color: $title-color-text;
-  }
-
-  &__theme {
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-    background: transparent;
-
-    &_image {
-      width: 40px;
-    }
   }
 
   &__snowflake {
@@ -75,6 +72,8 @@
     justify-content: center;
     display: flex;
     color: $title-color-text;
+    margin-top: 20px;
+    margin-bottom: 40px;
 
     &-img {
       display: flex;
@@ -103,12 +102,11 @@
     font-weight: 400;
     font-size: 16px;
     color: grey;
-    margin-top: 20px;
     max-width: 400px;
   }
 
   &__start {
-    margin-top: 20px;
+    margin-top: 40px;
     border: 1px solid rgb(0, 136, 109);
     border-radius: 50px;
     max-width: 200px;
@@ -176,6 +174,7 @@
       font-size: 80px;
       opacity: 0.7;
       z-index: 2;
+      margin-bottom: 10px;
     }
 
     &_image {
@@ -213,7 +212,7 @@
   &__yellow {
     position: absolute;
     background-color: rgb(255, 183, 0);
-    height: 634px;
+    height: 577px;
     width: 420px;
     border-radius: 30px;
     transform: rotate(3deg);
@@ -224,10 +223,10 @@
 }
 
 @media (max-width: 1920px) {
-  weather {
+  .weather {
     &__yellow {
-      top: 86px;
-      left: 222px;
+      top: 15px;
+      left: 219px;
     }
   }
 }
@@ -235,8 +234,8 @@
 @media (max-width: 1820px) {
   .weather {
     &__yellow {
-      top: 80px;
-      left: 170px;
+      top: 14px;
+      left: 191px;
     }
   }
 }
@@ -244,8 +243,8 @@
 @media (max-width: 1700px) {
   .weather {
     &__yellow {
-      top: 80px;
-      left: 170px;
+      top: 16px;
+      left: 160px;
     }
   }
 }
@@ -253,8 +252,8 @@
 @media (max-width: 1500px) {
   .weather {
     &__yellow {
-      top: 80px;
-      left: 110px;
+      top: 15px;
+      left: 111px;
     }
   }
 }
@@ -286,8 +285,8 @@
     }
 
     &__yellow {
-      top: 80px;
-      left: 102px;
+      top: 16px;
+      left: 97px;
     }
   }
 }
@@ -341,10 +340,10 @@
     }
 
     &__yellow {
-      width: 416px;
-      height: 556px;
-      top: 132px;
-      left: 70px;
+      width: 395px;
+      height: 538px;
+      top: 29px;
+      left: 97px;
     }
   }
 }
@@ -364,8 +363,10 @@
     }
 
     &__yellow {
+      top: 73px;
+      left: 77px;
       width: 376px;
-      height: 506px;
+      height: 486px;
     }
   }
 }
@@ -375,7 +376,8 @@
     padding: 40px;
     &__yellow {
       width: 350px;
-      top: 190px;
+      top: 96px;
+      left: 91px;
     }
   }
 }
@@ -384,6 +386,8 @@
   .weather {
     &__yellow {
       width: 320px;
+      top: 98px;
+      left: 76px;
     }
   }
 }
@@ -461,10 +465,7 @@
     }
 
     &__yellow {
-      height: 465px;
-      width: 240px;
-      top: 36px;
-      left: 51px;
+      display: none;
     }
   }
 }
@@ -520,6 +521,9 @@
     &__start {
       max-width: 200px;
       font-size: 18px;
+      position: absolute;
+      top: -280px;
+      left: 50px;
     }
 
     &__leaf {
@@ -540,12 +544,6 @@
       &_text {
         font-size: 14px;
       }
-    }
-
-    &__yellow {
-      max-width: 258px;
-      max-height: 465px;
-      left: 170px;
     }
   }
 }

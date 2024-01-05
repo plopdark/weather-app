@@ -2,11 +2,11 @@
   <div class="weather__container">
     <div class="weather__left">
       <div class="weather__top">
-        <div class="weather__icon"><img [src]="icon" /></div>
-        <h2 class="weather__title">Weatherapp.</h2>
-        <button class="weather__theme" (click)="changeTheme()">
-          <img [src]="themeImage" class="weather__theme_image" />
-        </button>
+        <div class="texts">
+          <div class="weather__icon"><img [src]="icon" /></div>
+          <h2 class="weather__title">Weatherapp.</h2>
+        </div>
+        <app-theme-button class="themeImage"></app-theme-button>
       </div>
       <img [src]="snowflake" class="weather__snowflake" />
       <div class="weather__texts">
@@ -19,12 +19,12 @@
           <img [src]="flower" class="weather__flower" />
         </div>
         <div class="weather__text">
-          Use weathe application and get weather information daily aand daily.
-          Donwload weather forecast for free and experience
+          Use weather application and get weather information daily and daily.
+          Download weather forecast for free and experience
         </div>
       </div>
       <div class="weather__bottom">
-        <button class="weather__start" routerLink="page">Get started</button>
+        <a class="weather__start" (click)="handleNavigate()">Get started</a>
         <img [src]="leaf" class="weather__leaf" />
       </div>
     </div>
