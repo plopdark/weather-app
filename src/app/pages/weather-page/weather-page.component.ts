@@ -86,7 +86,6 @@ export class WeatherPageComponent implements OnInit {
       .subscribe(async (value: string | null) => {
         if (value) {
           const cities = await this.weatherService.getCities(value);
-          console.log(cities);
           this.cities = cities;
         }
       });

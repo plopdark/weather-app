@@ -1,4 +1,5 @@
 @import "src/app/styles/theme";
+@import "src/app/styles/mixin";
 
 .weather-page-block {
   display: flex;
@@ -73,8 +74,6 @@
     }
   }
 
-  //   ------------------------------------------------------
-
   &__main {
     position: relative;
     border-radius: 30px;
@@ -141,7 +140,6 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
-  //   --------------------------------
 
   &__vectors {
     margin-top: 30px;
@@ -151,8 +149,6 @@
     justify-content: space-between;
   }
 }
-
-// ---------------------------------------------------
 
 .lil-text {
   font-size: 20px;
@@ -198,9 +194,7 @@ app-day-part:not(:last-child) {
   z-index: 5;
 }
 
-// --------------------------------------
-
-@media (max-width: 1240px) {
+@include _1240 {
   .weather-page {
     &__main-info {
       &_left {
@@ -223,7 +217,7 @@ app-day-part:not(:last-child) {
   }
 }
 
-@media (max-width: 1190px) {
+@include _1190 {
   .weather-page {
     &__main {
       padding-bottom: 21px;
@@ -245,7 +239,7 @@ app-day-part:not(:last-child) {
   }
 }
 
-@media (max-width: 1150px) {
+@include _1150 {
   .weather-page {
     &__main {
       padding: 18px;
@@ -271,7 +265,7 @@ app-day-part:not(:last-child) {
   }
 }
 
-@media (max-width: 1070px) {
+@include _1070 {
   .weather-page {
     &__city {
       font-size: 22px;
@@ -308,7 +302,7 @@ app-day-part:not(:last-child) {
   }
 }
 
-@media (max-width: 935px) {
+@include _935 {
   .weather-page {
     &__main-info {
       &_left {
@@ -326,7 +320,7 @@ app-day-part:not(:last-child) {
   }
 }
 
-@media (max-width: 870px) {
+@include _870 {
   .weather-page {
     &__main-date {
       margin-top: 40px;
@@ -351,7 +345,7 @@ app-day-part:not(:last-child) {
   }
 }
 
-@media (max-width: 720px) {
+@include _720 {
   .weather-page {
     &__main-info {
       &_indicators p {

@@ -1,3 +1,5 @@
+@import "src/app/styles/mixin";
+
 .item-weather-page {
   display: flex;
   align-items: center;
@@ -45,9 +47,7 @@
   }
 }
 
-// --------------------------------------
-
-@media (max-width: 1240px) {
+@include _1240 {
   .item-weather-page {
     &__column {
       gap: 13px;
@@ -59,7 +59,7 @@
   }
 }
 
-@media (max-width: 1190px) {
+@include _1190 {
   .item-weather-page {
     &__columns {
       gap: 40px;
@@ -67,7 +67,7 @@
   }
 }
 
-@media (max-width: 1150px) {
+@include _1150 {
   .item-weather-page {
     &__title {
       font-size: 22px;
@@ -95,7 +95,7 @@
   }
 }
 
-@media (max-width: 1070px) {
+@include _1070 {
   .item-weather-page {
     padding: 0 15px;
 
@@ -105,7 +105,7 @@
   }
 }
 
-@media (max-width: 985px) {
+@include _985 {
   .item-weather-page {
     padding: 0 10px;
 
@@ -115,7 +115,7 @@
   }
 }
 
-@media (max-width: 935px) {
+@include _935 {
   .item-weather-page {
     &__columns {
       gap: 20px;
@@ -123,7 +123,7 @@
   }
 }
 
-@media (max-width: 720px) {
+@include _720 {
   .item-weather-page {
     &__title {
       font-size: 20px;

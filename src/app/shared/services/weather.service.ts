@@ -1,3 +1,4 @@
+import { WeatherInterface } from './../../utilities/interfaces/weather.interface';
 import { nextDays } from './../../utilities/const/nextdays.const';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -41,7 +42,6 @@ export class WeatherService {
   public getWeather(city?: string): void {
     this.getWeatherData(city || this.city).subscribe((value) => {
       this.weatherData = value;
-      console.log(value);
       this.triggerRequest.next('');
     });
   }
@@ -75,14 +75,14 @@ export class WeatherService {
   }
 
   public getWeatherData(city: string, hour?: string): Observable<IWeatherData> {
-    return this.http.get<any>(
+    return this.http.get<IWeatherData>(
       `${this.baseUrl}/forecast.json?key=${this.key}&q=${city}&days=3&hour=${hour}&aqi=no&alerts=no`
     );
   }
 
   public async getCities(query: string): Promise<any> {
     const url = `${this.baseUrl}/search.json?key=${this.key}&q=${query}`;
-    return this.http.get<any>(url).toPromise();
+    return this.http.get(url).toPromise();
   }
 
   private isCurrentDay(enumType: any, currentDay: string): boolean {

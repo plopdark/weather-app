@@ -1,9 +1,10 @@
+@import "src/app/styles/mixin";
+
 .weather-page {
   &__days {
     margin-top: 30px;
     display: flex;
     flex-direction: row;
-    //  justify-content: space-between;
   }
 
   &__day {
@@ -62,9 +63,7 @@
   }
 }
 
-// --------------------------------------
-
-@media (max-width: 1150px) {
+@include _1150 {
   .weather-page {
     &__day {
       &_img {
@@ -78,7 +77,7 @@
   }
 }
 
-@media (max-width: 935px) {
+@include _935 {
   .weather-page__day {
     &_show {
       gap: 20px;

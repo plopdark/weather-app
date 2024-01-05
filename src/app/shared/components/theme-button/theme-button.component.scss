@@ -1,3 +1,5 @@
+@import "src/app/styles/mixin";
+
 .theme-button {
   border: none;
   cursor: pointer;
@@ -9,9 +11,7 @@
   }
 }
 
-// --------------------------------------
-
-@media (max-width: 1070px) {
+@include _1070 {
   .theme-button {
     &__image {
       width: 35px;
