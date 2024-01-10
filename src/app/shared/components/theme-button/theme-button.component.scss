@@ -1,0 +1,20 @@
+@import "src/app/styles/mixin";
+
+.theme-button {
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  background: transparent;
+
+  &__image {
+    width: 40px;
+  }
+}
+
+@include _1070 {
+  .theme-button {
+    &__image {
+      width: 35px;
+    }
+  }
+}

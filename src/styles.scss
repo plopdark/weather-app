@@ -12,6 +12,10 @@
   --background-right: rgb(61, 61, 61);
   --background-container: rgb(19, 19, 19);
   --background-theme: black;
+  --weather-page-text: #fff;
+  --weather-page-background: #080338;
+  --input-color: #fff;
+  --weather-page-text-reverse: #080338;
 }
 
 .whiteTheme {
@@ -21,4 +25,17 @@
   --background-right: rgba(0, 136, 109, 0.2);
   --background-container: #fff;
   --background-theme: #fff;
+  --weather-page-text: #080338;
+  --weather-page-background: #fff;
+  --input-color: #080338;
+  --weather-page-text-reverse: #fff;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

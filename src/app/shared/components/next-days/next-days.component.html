@@ -1,0 +1,27 @@
+<div class="weather-page__days">
+  <div class="weather-page__day">
+    <h4 class="weather-page__day_title lil-text">{{ formattedDayWeekOne }}</h4>
+    <p class="weather-page__day_text">{{ formattedDateOne }}</p>
+    <div class="weather-page__day_show">
+      <img
+        [src]="weatherImage"
+        alt="weather-icon"
+        class="weather-page__day_img"
+      />
+      <div class="weather-page__day_weathers">
+        <span class="weather-page__day_high" *ngIf="day?.day.maxtemp_c >= 0.5"
+          >+{{ day?.day.maxtemp_c | number : "1.0-0" }}°</span
+        >
+        <span class="weather-page__day_high" *ngIf="day?.day.maxtemp_c < 0.5"
+          >{{ day?.day.maxtemp_c | number : "1.0-0" }}°</span
+        >
+        <span class="weather-page__day_low" *ngIf="day?.day.mintemp_c >= 0.5"
+          >+{{ day?.day.mintemp_c | number : "1.0-0" }}°</span
+        >
+        <span class="weather-page__day_low" *ngIf="day?.day.mintemp_c < 0.5"
+          >{{ day?.day.mintemp_c | number : "1.0-0" }}°</span
+        >
+      </div>
+    </div>
+  </div>
+</div>

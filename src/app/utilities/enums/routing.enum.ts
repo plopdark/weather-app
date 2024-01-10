@@ -1,3 +1,3 @@
 export enum RoutingEnum {
-  home = 'home',
+  Home = 'home',
 }
